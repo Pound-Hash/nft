@@ -40,18 +40,16 @@ body {
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid: auto / .87fr;
+  grid: auto / 87vw;
   place-items: center;
   place-content: center;
 }
 
 main {
   background: var(--bgCard);
-  padding: 4vh 7vw;
+  padding: 7% 7% 10%;
   border-radius: 2.1vmax;
   position: relative;
-  display: grid;
-  grid: auto / 1fr;
 }
 
 .equilibrium {
@@ -130,8 +128,7 @@ hr {
 
 .attribution {
   position: absolute;
-  bottom: -10%;
-  margin-bottom: 10px;
+  bottom: -9%;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -146,4 +143,104 @@ hr {
 .attribution a {
   text-decoration: none;
   color: #00C6BC;
+}
+
+@media screen and (min-width: 535px) {
+
+  body {
+    grid: auto / 77vw;
+  }
+
+  h1 {
+    font-size: calc(.8rem + 2.4vw);
+  }
+
+  .paragraph {
+    font-size: calc(.6rem + 2.4vw);
+  }
+
+  .data p {
+    font-size: calc(.5rem + 2.4vw);
+  }
+
+  .caption {
+    font-size: calc(.4rem + 2.4vw);
+}
+  .attribution {
+    font-size: calc(.2rem + 2.4vw);
+    bottom: -10%;
+  }
+
+}
+
+@media screen and (min-width: 718px) {
+
+  body {
+    grid: auto / 25vw;
+  }
+
+  main {
+    border-radius: 2.1vmin;
+  }
+
+  .equilibrium {
+    border-radius: 1.3vmin;
+  }
+
+  h1 {
+    font-size: calc(.8rem + .4vw);
+  }
+
+  .paragraph {
+    font-size: calc(.6rem + .4vw);
+  }
+
+  .data p {
+    font-size: calc(.5rem + .4vw);
+  }
+
+  img[alt="ethereum icon"] {
+    margin-right: .8vw;
+  }
+
+  img[alt="clock icon"] {
+    margin-right: .8vw;
+  }
+
+  .caption {
+    font-size: calc(.4rem + .4vw);
+  }
+
+  .attribution {
+    font-size: calc(.2rem + .4vw);
+    line-height: 1.8;
+    bottom: -8%;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+
+  h1 {
+    font-size: calc(.8rem + .7vw);
+  }
+
+  .paragraph {
+    font-size: calc(.6rem + .7vw);
+  }
+
+  .data p {
+    font-size: calc(.5rem + .7vw);
+  }
+
+  .caption {
+    font-size: calc(.4rem + .7vw);
+  }
+
+  .attribution {
+    font-size: calc(.2rem + .7vw);
+    line-height: 1.6;
+    bottom: -10%;
+  }
+
 }
