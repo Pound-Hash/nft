@@ -52,8 +52,26 @@ main {
   position: relative;
 }
 
+.images {
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
 .equilibrium {
   border-radius: 1.3vmax;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -1;
+  background:
+    hsla(178, 100%, 50%, .5);
+}
+
+.images:hover .overlay {
+  z-index: 2;
 }
 
 h1 {
@@ -61,6 +79,10 @@ h1 {
   color: var(--white);
   margin-top: 7%;
   font-weight: 600;
+}
+
+.heading {
+  text-decoration: none;
 }
 
 .paragraph {
@@ -124,6 +146,7 @@ hr {
 
 .creator {
   color: var(--white);
+  text-decoration: none;
 }
 
 .attribution {
@@ -143,6 +166,10 @@ hr {
 .attribution a {
   text-decoration: none;
   color: #00C6BC;
+}
+
+h1:hover, .creator:hover {
+  color: var(--cyan);
 }
 
 @media screen and (min-width: 535px) {
